@@ -29,3 +29,19 @@ struct Geo: Decodable {
     let lat: String?
     let lng: String?
 }
+
+
+struct Post: Decodable {
+    let userId: Int?
+    let id: Int?
+    let title: String?
+    let body: String?
+}
+
+struct Comment: Decodable {
+    let postId: Int?
+    let id: Int?
+    let name: String?
+    let email: String?
+    let body: String?
+}

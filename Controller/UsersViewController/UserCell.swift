@@ -8,7 +8,7 @@
 import UIKit
 
 class UserCell: UITableViewCell {
-
+    
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var email: UILabel!
@@ -22,13 +22,4 @@ class UserCell: UITableViewCell {
         phone.text = user.phone
         website.text = user.website
     }
-    
-    
-    /*
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    */
 }

@@ -28,7 +28,14 @@ class UsersTVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as! UserCell
         let user = users[indexPath.row]
         cell.fillingData(with: user)
+        
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexParh = tableView.indexPathForSelectedRow else { return }
+        guard let postsVC = segue.destination as? PostsTVC else { return }
+        postsVC.indexUser = indexParh.row
     }
     
     func fetchData() -> Void {
@@ -46,6 +53,7 @@ class UsersTVC: UITableViewController {
             } catch let error {
                 print(error)
             }
+            //Выход из фонового режима в основной поток, и все это делать в асинхронном режиме
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
