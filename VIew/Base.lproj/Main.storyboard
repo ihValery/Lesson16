@@ -125,6 +125,7 @@
                                             <state key="normal" title="Post"/>
                                             <connections>
                                                 <action selector="buttonTappedWithSender:" destination="h8Q-rK-hhQ" eventType="touchUpInside" id="xFl-Kg-zeg"/>
+                                                <action selector="didTapButton:" destination="h8Q-rK-hhQ" eventType="touchUpInside" id="QDB-PA-xSg"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -146,7 +147,7 @@
                                     <outlet property="phone" destination="OZI-VX-Ywa" id="GgL-5R-DRT"/>
                                     <outlet property="username" destination="UCY-TW-eFF" id="6sc-VI-jj3"/>
                                     <outlet property="website" destination="DmN-DG-nCP" id="SY1-uQ-yqg"/>
-                                    <segue destination="BTI-GE-oPe" kind="show" id="9DO-b5-0cK"/>
+                                    <segue destination="BTI-GE-oPe" kind="show" id="iLd-oa-aC1"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

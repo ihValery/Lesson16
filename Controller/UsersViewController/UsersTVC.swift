@@ -28,7 +28,6 @@ class UsersTVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as! UserCell
         let user = users[indexPath.row]
         cell.fillingData(with: user)
-        
         return cell
     }
     
