@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol CustomCellDelegate: AnyObject {
+    func cellButtonTapped(cell: UserCell)
+}
+
 class UserCell: UITableViewCell {
+    
+    weak var delegate: CustomCellDelegate?
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var username: UILabel!
@@ -22,4 +28,9 @@ class UserCell: UITableViewCell {
         phone.text = user.phone
         website.text = user.website
     }
+    
+    @IBAction func buttonTapped(sender: AnyObject) {
+        delegate?.cellButtonTapped(cell: self)
+    }
+    
 }

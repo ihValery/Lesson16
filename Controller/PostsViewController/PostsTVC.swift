@@ -14,7 +14,6 @@ class PostsTVC: UITableViewController {
     private var posts: [Post] = []
     
     var indexUser: Int!
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +43,7 @@ class PostsTVC: UITableViewController {
     
     
     func fetchDataPost() -> Void {
+       // print(indexUser)
         let urlPost = jsonUrl + String(indexUser + 1)
         guard let url = URL(string: urlPost) else { return }
         

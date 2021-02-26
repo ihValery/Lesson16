@@ -7,8 +7,8 @@
 
 import UIKit
 
-class UsersTVC: UITableViewController {
-
+class UsersTVC: UITableViewController, CustomCellDelegate {
+   
     private let jsonUrl = "https://jsonplaceholder.typicode.com/users"
     
     private var users: [User] = []
@@ -23,19 +23,32 @@ class UsersTVC: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as! UserCell
         let user = users[indexPath.row]
         cell.fillingData(with: user)
+        cell.delegate = self
         return cell
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let indexParh = tableView.indexPathForSelectedRow else { return }
-        guard let postsVC = segue.destination as? PostsTVC else { return }
-        postsVC.indexUser = indexParh.row
+    func cellButtonTapped(cell: UserCell) {
+        //Вот оно!
+        guard let indexPath = self.tableView.indexPath(for: cell) else { return }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let destination = storyboard.instantiateViewController(identifier: "PostsSB") as? PostsTVC else { return }
+        destination.indexUser = indexPath.row
+ 
+        show(destination, sender: nil)
     }
+    
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let indexParh = tableView.indexPathForSelectedRow else { return }
+//        guard let postsVC = segue.destination as? PostsTVC else { return }
+//        postsVC.indexUser = indexParh.row
+//
+//    }
     
     func fetchData() -> Void {
         guard let url = URL(string: jsonUrl) else { return }
