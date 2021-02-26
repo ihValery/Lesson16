@@ -69,7 +69,7 @@
         <scene sceneID="HTf-AZ-7Y1">
             <objects>
                 <tableViewController storyboardIdentifier="UsersTSB" id="8fG-34-RI3" customClass="UsersTVC" customModule="Lesson16" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="PHd-fW-YgS">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="PHd-fW-YgS">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -124,8 +124,7 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <state key="normal" title="Post"/>
                                             <connections>
-                                                <action selector="buttonTappedWithSender:" destination="h8Q-rK-hhQ" eventType="touchUpInside" id="xFl-Kg-zeg"/>
-                                                <action selector="didTapButton:" destination="h8Q-rK-hhQ" eventType="touchUpInside" id="QDB-PA-xSg"/>
+                                                <action selector="buttonTappedWithSender:" destination="h8Q-rK-hhQ" eventType="touchUpInside" id="7pp-hk-4Ai"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -147,7 +146,7 @@
                                     <outlet property="phone" destination="OZI-VX-Ywa" id="GgL-5R-DRT"/>
                                     <outlet property="username" destination="UCY-TW-eFF" id="6sc-VI-jj3"/>
                                     <outlet property="website" destination="DmN-DG-nCP" id="SY1-uQ-yqg"/>
-                                    <segue destination="BTI-GE-oPe" kind="show" id="iLd-oa-aC1"/>
+                                    <segue destination="BTI-GE-oPe" kind="show" id="LLL-QG-j3q"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -165,7 +164,7 @@
         <!--PostsTVC-->
         <scene sceneID="eOu-oB-Civ">
             <objects>
-                <tableViewController storyboardIdentifier="AboutSB" id="BTI-GE-oPe" customClass="PostsTVC" customModule="Lesson16" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="PostsSB" id="BTI-GE-oPe" customClass="PostsTVC" customModule="Lesson16" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="UYf-TR-vmu">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -244,7 +243,7 @@
         <scene sceneID="X47-4G-SZD">
             <objects>
                 <tableViewController storyboardIdentifier="CommentsSB" id="JR7-lz-Dse" customClass="CommentsTVC" customModule="Lesson16" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZtN-T0-8cI">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZtN-T0-8cI">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
